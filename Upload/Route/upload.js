@@ -1,5 +1,5 @@
 const express = require('express');
-const { upload } = require('../Controller/Upload');
+const { upload } = require('../Controller/upload');
 
 const router= express();
 

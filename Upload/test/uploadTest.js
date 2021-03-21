@@ -29,6 +29,10 @@ describe('Test for upload', () => {
             .post('/upload')
             .set('content-type', 'multipart/form-data')
             .attach('multi-image', fs.readFileSync(`${__dirname}/1616172372837.jpg`), 'test/1616172372837.jpg')
+            .attach('multi-image', fs.readFileSync(`${__dirname}/food-menu-candidate.jpg`), 'test/food-menu-candidate.jpg')
+            .attach('multi-image', fs.readFileSync(`${__dirname}/food.jpeg`), 'test/food.jpeg')
+            .attach('multi-image', fs.readFileSync(`${__dirname}/foodheader.jpeg`), 'test/foodheader.jpeg')
+
         expect(res.status).to.equal(201);
         console.log('RES', res.body.data)
     })
