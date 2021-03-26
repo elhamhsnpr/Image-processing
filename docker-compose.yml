@@ -1,0 +1,18 @@
+version: "3"
+services:
+  pg:
+   image: "postgres:12"
+   container_name: "postgres"
+   ports:
+     - "5432:5432"
+   volumes:
+     - ./postgresDB/db_data:/var/lib/postgresql/data   
+   environment:
+     POSTGRES_PASSWORD: "972500"
+  node_backend:
+    container_name: "backend"
+    build: ./prog-image-back-end
+    restart: on-failure
+    ports:
+      - "8080:8080"
+   
