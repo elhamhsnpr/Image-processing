@@ -11,7 +11,7 @@ services:
      POSTGRES_PASSWORD: "972500"
   node_backend:
     container_name: "backend"
-    build: ./prog-image-back-end
+    build: ./BackEnd
     restart: on-failure
     ports:
       - "8080:8080"
